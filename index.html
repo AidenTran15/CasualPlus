@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <header>
         <!-- Logo and Business Name -->
@@ -16,26 +18,30 @@
                 <img src="icons8-worker-96.png
                 " alt="icon by Icons8" id="site-logo">
             </div>
-    
+
             <!-- Business Name -->
             <div id="site-name">CasualPlus</div>
         </div>
-        
+
         <!-- Navigation Bar -->
         <div id="navbar-container">
             <nav id="navbar">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="Orders.html" class="nav-link">Orders</a>
+                <a href="https://casualpluss.auth.ap-southeast-2.amazoncognito.com/logout?client_id=606gklfqs9s1o9hdpb6kace973&logout_uri=https%3A%2F%2Fcasualplus.s3.ap-southeast-2.amazonaws.com%2Flogged_outt.html"
+                    class="nav-link">Log out</a>
         </div>
     </header>
     <main>
         <section class="Services">
             <!-- Sample Services will be loaded here -->
-              <!-- Sample Services -->
-              <article class="Service">
+            <!-- Sample Services -->
+            <article class="Service">
                 <img src="carwash.jpg" alt="Service 1">
                 <h2>Car Cleaning Service</h2>
-                <p>Revitalize Your Ride: Our car cleaning service offers comprehensive interior and exterior detailing to make your vehicle look and feel brand new. With our eco-friendly Services and expert technicians, we transform your car into a spotless, comfortable sanctuary on wheels.</p>
+                <p>Revitalize Your Ride: Our car cleaning service offers comprehensive interior and exterior detailing
+                    to make your vehicle look and feel brand new. With our eco-friendly Services and expert technicians,
+                    we transform your car into a spotless, comfortable sanctuary on wheels.</p>
                 <p class="price">Price: $25</p>
                 <button onclick="addToOrders('Service 1', 10)">Add to Orders</button>
             </article>
@@ -43,13 +49,15 @@
             <article class="Service">
                 <img src="computerservice.jpg" alt="Service 2">
                 <h2>Computer Repair Service</h2>
-                <p>Tech Trouble? I Got You Covered: My service offers fast, reliable solutions for all your computing needs. From small software glitches to hardware malfunctions, I will bring your system back to life, right in the comfort of your home.</p>
+                <p>Tech Trouble? I Got You Covered: My service offers fast, reliable solutions for all your computing
+                    needs. From small software glitches to hardware malfunctions, I will bring your system back to life,
+                    right in the comfort of your home.</p>
                 <p class="price">Price: $10</p>
                 <button onclick="addToOrders('Service 1', 10)">Add to Orders</button>
             </article>
             <!-- Repeat similar blocks for other Services -->
-
         </section>
     </main>
 </body>
+
 </html>

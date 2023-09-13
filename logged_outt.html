@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Logged Out</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(to bottom right, #f0f0f0, #dfe9f3);
+            font-family: 'Open Sans', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .logout-container {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+        }
+
+        h1 {
+            color: #3498db;
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        a {
+            display: inline-block;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #258cd1;
+            transform: translateY(-2px);
+        }
+
+        a:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body onload="document.body.style.opacity='1'">
+    <div class="logout-container">
+        <h1>You are logged out</h1>
+        <a
+            href="https://casualpluss.auth.ap-southeast-2.amazoncognito.com/login?client_id=606gklfqs9s1o9hdpb6kace973&response_type=code&scope=email+openid&redirect_uri=https%3A%2F%2Fcasualplus.s3.ap-southeast-2.amazonaws.com%2Findex.html">Login
+            back</a>
+    </div>
+</body>
+
+</html>
