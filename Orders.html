@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orders - CasualPlus</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <title>Orders Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Include your stylesheet here -->
 </head>
+
 <body>
     <header>
         <!-- Logo and Business Name -->
@@ -16,11 +17,11 @@
                 <img src="icons8-worker-96.png
                 " alt="icon by Icons8" id="site-logo">
             </div>
-    
+
             <!-- Business Name -->
             <div id="site-name">CasualPlus</div>
         </div>
-        
+
         <!-- Navigation Bar -->
         <div id="navbar-container">
             <nav id="navbar">
@@ -28,13 +29,14 @@
                 <a href="Orders.html" class="nav-link">Orders</a>
         </div>
     </header>
-    <main>
-        <section class="Orders">
-            <ul id="orders-items">
-                <!-- orders items will be displayed here -->
-            </ul>
-            <p>Total: $<span id="total">0</span></p>
-        </section>
-    </main>
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Your Orders</h2>
+        <div id="orders" class="row">
+            <!-- Orders will be appended here -->
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts.js"></script>
 </body>
+
 </html>
