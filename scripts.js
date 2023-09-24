@@ -52,15 +52,14 @@ function getOrders() {
             $('#orders').html('');
             items.forEach(function (item) {
                 $('#orders').append(`
-                    <div class="col-md-4">
-                        <div class="order-card">
-                            <h5>Service Name: ${item['Service-Name']}</h5>
-                            <p>Price: $${item.Price}</p>
-                            <button onclick="deleteOrder('${item['Service-Name']}', ${item.Price})">Delete</button>
-                        </div>
-                    </div>
+                    <article class="Service">
+                        <h2>${item['Service-Name']}</h2>
+                        <p class="price">Price: $${item.Price}</p>
+                        <button onclick="deleteOrder('${item['Service-Name']}', ${item.Price})">Delete</button>
+                    </article>
                 `);
             });
+
         },
         error: function (error) {
             console.error('Error fetching items:', error);
