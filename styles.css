@@ -1,143 +1,218 @@
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
 
-/* Header Styles */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 5%;
-    background-color: #1b6293ff;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+    /* Navbar adjustments */
+    .navbar {
+        padding: 10px 5%;
+        background-color: #1b6293ff;
+    }
 
-#logo-container {
-    display: flex;
-    align-items: center;
-}
+    .navbar-toggler-icon {
+        background-image: none !important; /* Remove the background SVG */
+        font-size: 28px; /* Adjust size */
+        text-shadow: none; /* Remove any text shadow */
+    }
+    
+    .navbar-toggler {
+        border: none;
+    }
+    
+    .navbar-toggler:focus {
+        outline: none;
+        box-shadow: none;
+    }
+    
+    .navbar-dark .navbar-toggler-icon::before {
+        content: '≡';
+    }
+    
 
-#logo-container {
-    margin-right: 20px;
-}
+    .navbar-nav {
+        margin-left: auto; /* Align the navbar items to the right */
+    }
 
-.Service img {
-    width: 150px;      
-    height: 150px;    
-    object-fit: cover; 
-    border-radius: 10px;
-    margin: 0 auto;    
-    display: block;    
-}
+    .nav-item {
+        margin-left: 20px; 
+    }
 
+    .nav-link {
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 20px;
+        text-decoration: none;
+        color: #ffffff;
+        transition: all 0.3s;
+    }
 
-#site-logo {
-    width: 50px;  
-    height: auto;
-}
+    .nav-link:hover {
+        background-color: #4100a3;
+        color: #FFF;
+    }
 
-#site-name {
-    color: #FFFFFF;
-    font-size: 28px;
-    font-weight: bold;
-}
+    .navbar-dark .navbar-toggler-icon {
+        background-color: #FFF; 
+    }
 
-#navbar-container {
-    background-color: transparent;
-}
+    .Service img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin: 0 auto;
+        display: block;
+    }
 
-#navbar {
-    display: flex;
-    gap: 20px; 
-}
+    #site-logo {
+        width: 50px;
+        height: auto;
+    }
 
-.nav-link {
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-size: 20px;
-    text-decoration: none;
-    color: #ffffff;
-    transition: all 0.3s;
-}
+    .carousel {
+        max-height: 500px;
+        overflow: hidden;
+    }
 
-.nav-link:hover {
-    background-color: #4100a3;
-    color: #FFF;
-}
+    .carousel img {
+        max-height: 500px;
+    }
 
-.nav-link:active {
-    background-color: #ccff00;
-}
+    .carousel-control-prev, .carousel-control-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: auto;
+        height: auto;
+        background: none;
+    }
 
-h1{
-    font-size: 36px;
-}
+    .carousel-control-prev {
+        left: 0;
+    }
 
-h3{
-    font-size: 16px;
-}
+    .carousel-control-next {
+        right: 0;
+    }
 
-.Services {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 2rem auto;
-}
+    .carousel-control-prev i, .carousel-control-next i {
+        font-size: 2rem;
+        line-height: 1;
+    }
 
-.Service {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
+    .carousel-control-prev:focus, .carousel-control-next:focus,
+    .carousel-control-prev:active, .carousel-control-next:active {
+        outline: none;
+        box-shadow: none;
+    }
 
-.Service:hover {
-    transform: translateY(-10px);
-}
+    .Services {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 2rem;
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 2rem auto;
+    }
 
-.Service img {
-    max-width: 100%;
-    border-radius: 10px;
-}
+    .promo-banner {
+        text-align: center;
+        margin: 40px 0;
+        padding: 20px;
+        background-color: rgb(0, 0, 0); 
+        color: #FFF; /* White text */
+    }
 
-.Service h2 {
-    margin-top: 1rem;
-}
+    .promo-banner h1 {
+        font-family: 'VT323', monospace;
+        font-size: 48px;
+        margin-bottom: 10px; 
+    }
 
-.price {
-    color: #1b6293ff;
-    font-weight: bold;
-}
+    .promo-banner p {
+        font-size: 18px; /* Also relatively large, but smaller than the heading */
+    }
 
-button {
-    background-color: #1b6293ff;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+    .Service {
+        border: 1px solid #ddd;
+        padding: 1rem;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
 
-button:hover {
-    background-color: #14567a;
-}
+    .Service:hover {
+        transform: translateY(-10px);
+    }
 
-.Orders {
-    max-width: 300px;
-    margin: 2rem auto;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-}
+    .Service img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    .Service h2 {
+        margin-top: 1rem;
+    }
+
+    .price {
+        color: #1b6293ff;
+        font-weight: bold;
+    }
+
+    button {
+        background-color: #1b6293ff;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #14567a;
+    }
+
+    .Orders {
+        max-width: 300px;
+        margin: 2rem auto;
+        padding: 1rem;
+        border: 1px solid #ddd;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+        background-color: #1b6293ff;
+        padding: 20px 0;
+        color: #ffffff;
+        margin-top: 50px;
+    }
+    
+    footer h5 {
+        margin-bottom: 20px;
+    }
+    
+    footer a {
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    footer a:hover {
+        color: #dddddd;
+    }
+    
+    footer ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    
+    footer li {
+        margin-bottom: 10px;
+    }
+    
