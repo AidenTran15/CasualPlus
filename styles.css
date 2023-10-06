@@ -12,31 +12,35 @@
     }
 
     .navbar-toggler-icon {
-        background-image: none !important; /* Remove the background SVG */
-        font-size: 28px; /* Adjust size */
-        text-shadow: none; /* Remove any text shadow */
+        background-image: none !important;
+        /* Remove the background SVG */
+        font-size: 28px;
+        /* Adjust size */
+        text-shadow: none;
+        /* Remove any text shadow */
     }
-    
+
     .navbar-toggler {
         border: none;
     }
-    
+
     .navbar-toggler:focus {
         outline: none;
         box-shadow: none;
     }
-    
+
     .navbar-dark .navbar-toggler-icon::before {
         content: '≡';
     }
-    
+
 
     .navbar-nav {
-        margin-left: auto; /* Align the navbar items to the right */
+        margin-left: auto;
+        /* Align the navbar items to the right */
     }
 
     .nav-item {
-        margin-left: 20px; 
+        margin-left: 20px;
     }
 
     .nav-link {
@@ -54,7 +58,7 @@
     }
 
     .navbar-dark .navbar-toggler-icon {
-        background-color: #FFF; 
+        background-color: #FFF;
     }
 
     .Service img {
@@ -80,7 +84,8 @@
         max-height: 500px;
     }
 
-    .carousel-control-prev, .carousel-control-next {
+    .carousel-control-prev,
+    .carousel-control-next {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -97,13 +102,16 @@
         right: 0;
     }
 
-    .carousel-control-prev i, .carousel-control-next i {
+    .carousel-control-prev i,
+    .carousel-control-next i {
         font-size: 2rem;
         line-height: 1;
     }
 
-    .carousel-control-prev:focus, .carousel-control-next:focus,
-    .carousel-control-prev:active, .carousel-control-next:active {
+    .carousel-control-prev:focus,
+    .carousel-control-next:focus,
+    .carousel-control-prev:active,
+    .carousel-control-next:active {
         outline: none;
         box-shadow: none;
     }
@@ -117,22 +125,28 @@
         margin: 2rem auto;
     }
 
+    button {
+        margin-top: auto;
+    }
+
     .promo-banner {
         text-align: center;
         margin: 40px 0;
         padding: 20px;
-        background-color: rgb(0, 0, 0); 
-        color: #FFF; /* White text */
+        background-color: rgb(0, 0, 0);
+        color: #FFF;
+        /* White text */
     }
 
     .promo-banner h1 {
         font-family: 'VT323', monospace;
         font-size: 48px;
-        margin-bottom: 10px; 
+        margin-bottom: 10px;
     }
 
     .promo-banner p {
-        font-size: 18px; /* Also relatively large, but smaller than the heading */
+        font-size: 18px;
+        /* Also relatively large, but smaller than the heading */
     }
 
     .Service {
@@ -192,27 +206,26 @@
         color: #ffffff;
         margin-top: 50px;
     }
-    
+
     footer h5 {
         margin-bottom: 20px;
     }
-    
+
     footer a {
         color: #ffffff;
         text-decoration: none;
         transition: color 0.3s;
     }
-    
+
     footer a:hover {
         color: #dddddd;
     }
-    
+
     footer ul {
         list-style-type: none;
         padding-left: 0;
     }
-    
+
     footer li {
         margin-bottom: 10px;
     }
-    
