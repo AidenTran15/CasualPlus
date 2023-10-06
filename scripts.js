@@ -28,6 +28,9 @@ function addToOrders(serviceName, price) {
 
 // Fetch and display orders
 function getOrders() {
+    // Show the loading spinner
+    $('#loading-spinner').show();
+
     $.ajax({
         url: GET_API_URL,
         type: 'GET',
@@ -40,7 +43,6 @@ function getOrders() {
                 return;
             }
 
-            // Log the fetched items to the console
             console.log('Fetched items:', items);
 
             if (!Array.isArray(items)) {
@@ -50,7 +52,11 @@ function getOrders() {
 
             // Clear previous orders and render the new list
             $('#orders').html('');
+            let totalAmount = 0; // Track the total amount
+
             items.forEach(function (item) {
+                totalAmount += parseFloat(item.Price); // Add each item's price to the total amount
+
                 $('#orders').append(`
                     <article class="Service">
                         <h2>${item['Service-Name']}</h2>
@@ -60,14 +66,31 @@ function getOrders() {
                 `);
             });
 
+            // Add the total amount to the end of the orders section
+            $('#orders').append(`
+                <div class="total-amount">
+                    <h2>Total Amount: $${totalAmount.toFixed(2)}</h2>
+                </div>
+            `);
+
+            // Update the cart count on the UI
+            $('#cart-count').text(items.length);
+
+            // Hide the loading spinner
+            $('#loading-spinner').hide();
+
         },
         error: function (error) {
             console.error('Error fetching items:', error);
+            // Hide the loading spinner in case of error
+            $('#loading-spinner').hide();
         }
     });
 }
 
-// Handle order deletion
+
+
+
 // Handle order deletion
 function deleteOrder(serviceName, price) {
     console.log('Deleting item with Service-Name:', serviceName, 'and Price:', price);
@@ -99,5 +122,10 @@ function deleteOrder(serviceName, price) {
 $(document).ready(function () {
     if (window.location.href.indexOf("Orders.html") > -1) {
         getOrders();
+
+        // Add event listener for the checkout button
+        $('body').on('click', '#checkoutButton', function () {
+            window.location.href = 'check-out-page.html';
+        });
     }
 });

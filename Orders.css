@@ -1,3 +1,9 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -98,6 +104,18 @@ h3 {
     border-radius: 10px;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+
+    display: flex;
+    /* Makes this a flexbox container */
+    flex-direction: column;
+    /* Stacks children vertically */
+    justify-content: space-between;
+    /* Space out the items so the button goes to the bottom */
+}
+
+.service-content {
+    /* This will allow the div to grow and occupy the maximum space available */
+    flex-grow: 1;
 }
 
 .Service:hover {
@@ -112,6 +130,19 @@ h3 {
 .Service h2 {
     margin-top: 1rem;
 }
+
+.Service p {
+    flex-grow: 1;
+    /* Allows these elements to grow and occupy the available space */
+    flex-shrink: 0;
+    /* Prevents these elements from shrinking */
+}
+
+.Service button {
+    margin-top: auto;
+    /* Pushes the button to the bottom */
+}
+
 
 .price {
     color: #1b6293ff;
