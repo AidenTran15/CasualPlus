@@ -58,7 +58,7 @@
     }
 
     .navbar-dark .navbar-toggler-icon {
-        background-color: #FFF;
+        background-color: transparent;
     }
 
     .Service img {
